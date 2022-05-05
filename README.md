@@ -1,9 +1,8 @@
-# Read Me First
-The following was discovered as part of building this project:
+# DevBank API
 
-* The original package name 'com.devweek.devbank-api' is invalid and this project uses 'com.devweek.devbankapi' instead.
+This project is made to execute same transactions of a bank.
 
-# Getting Started
+# Getting Started on Spring
 
 ### Reference Documentation
 For further reference, please consider the following sections:
@@ -23,3 +22,6 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 
+
+
+Made by Jefferson da Silva
