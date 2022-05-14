@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 @Table(name= "tb_transaction")
 public class Transaction {
@@ -19,6 +21,7 @@ public class Transaction {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	@Column(name = "date_time")
 	private LocalDateTime dateTime;
 	
@@ -28,6 +31,9 @@ public class Transaction {
 	
 	@Enumerated(EnumType.STRING)
 	private TransactionType type;
+	
+	@Column(name="id_account")
+	private Long idAccount;
 	
 	
 	public Long getId() {
@@ -59,6 +65,12 @@ public class Transaction {
 	}
 	public void setType(TransactionType type) {
 		this.type = type;
+	}
+	public Long getIdAccount() {
+		return idAccount;
+	}
+	public void setIdAccount(Long idAccount) {
+		this.idAccount = idAccount;
 	}
 	
 	
